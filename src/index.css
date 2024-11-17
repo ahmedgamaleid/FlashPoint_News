@@ -1,13 +1,266 @@
-body {
+html, body {
+  height: 100%;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.footersection {
+  margin-top: auto; /* Push footer to the bottom */
+  margin-bottom: 0; 
+}
+
+/* Importin
+ Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+.loading-container {
+  position: relative;
+  display: inline-block;
+} 
+body{
+  font-family: "Comfortaa", serif;
+
+}
+.LandingScreenn {
+  height: 85vh;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .LandingScreenn {
+    height: 100vh; /* Full viewport height for smaller screens */
+  }
+}
+
+/* Style for the active link with underline */
+.underline {
+  border-bottom: 3px solid #fefefd; /* Change the color to your preferred one */
+  padding-bottom: 2px;
+}
+ .foont{
+  font-family: "Comfortaa", serif; 
+ }
+ .LandingScreenn .overr {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: left;
+  padding: 3rem;
+  box-sizing: border-box;
+}
+
+.LandingScreenn h1 {
+  font-size: 6rem; /* Reduced for better responsiveness */
+  margin: 10px 0;
+}
+
+.LandingScreenn p {
+  font-size: 2.1rem; /* Reduced for better readability */
+  margin: 5px 0;
+  font-style: normal;
+  font-weight: lighter;
+  color: darkgray;
+}
+
+@media (max-width: 768px) {
+  .LandingScreenn .overr {
+    align-items: flex-start; /* Center-align text for smaller screens */
+    text-align: left;
+    padding: 2rem; /* Adjusted padding for small screens */
+  }
+
+  .LandingScreenn h1 {
+    font-size: 6rem; /* Reduced for better responsiveness */
+    margin: 10px 0;; /* Further reduced for mobile screens */
+  }
+
+  .LandingScreenn p {
+    font-size: 1.2rem; /* Further reduced for readability */
+  }
+}
+
+@media (max-width: 480px) {
+  .LandingScreenn .overr {
+    padding: 1.5rem; /* Smaller padding for very small screens */
+  }
+
+  .LandingScreenn h1 {
+    font-size: 3rem; /* Reduced for very small screens */
+  }
+
+  .LandingScreenn p {
+    font-size: 1.4rem;
+  }
+}
+/* NewsItem.css */
+.news-item {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.news-item:hover .hover-overlay {
+  opacity: 1;
+}
+
+/* Button movement on hover */
+.hover-overlay button {
+  transform: translatex(80px); /* Start the button 20px lower */
+  transition: transform 0.5s ease;
+}
+
+.news-item:hover .hover-overlay button {
+  transform: translateY(0); /* Move the button up to its normal position */
+  transition-delay: 0.2s; /* Delay before the button movement starts */
+}
+.letter {
+  display: inline-block;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.footersection {
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.footerbackgroundcontainer{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.footerbackgroundimage {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0g;
+ 
+}
+
+.footeroverlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+.footercontentcontainer{
+  z-index: 1;
+  padding: 2rem;
+}
+
+.footer-link:hover {
+  color: #0d6efd; /* Replace with your desired hover color */
+}
+.footer-logo {
+  width: 150px;
+  max-width: 90%;
+  height: auto;
+}
+
+.footersection {
+  position: relative;
+  background-color: transparent;
+  width: 100%;
+  margin-top: auto; /* Pushes the footer to the bottom */
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .footercontentcontainer{
+    padding: 1rem; /* Adjust padding for smaller screens */
+  }
+}
+.contactus {
+  background-color: #f8f9fa;
+  padding: 3rem 0;
+}
+
+.contactus h4 {
+  font-weight: bold;
+  color: #080808;
+}
+
+.contactus .form-control {
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 0.75rem;
+  transition: border-color 0.3s;
+}
+
+.contactus .form-control:focus {
+  border-color: #0a0a0a;
+  box-shadow: 0 0 5px rgba(10, 10, 10, 0.3);
+}
+
+.contactus .btn-primary {
+  background-color: #010101;
+  border: none;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.contactus .btn-primary:hover {
+  background-color: #060606;
+  transform: scale(1.05);
+}
+.newsss .btn-primary {
+  background-color: #010101;
+  border: none;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.newsss .btn-primary:hover {
+  background-color: #060606;
+  transform: scale(1.05);
+}
+
+.newsss .btn-primary:disabled {
+  background-color: #010101; /* Same as enabled state */
+  color: #fff; /* Ensure text is visible */
+  opacity: 1; /* Remove default dimming for disabled buttons */
+  cursor: not-allowed;
+}
+
+.contactus i {
+  color: #060606;
 }
