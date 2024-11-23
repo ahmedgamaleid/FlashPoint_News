@@ -30,7 +30,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="contactus mt-5 pt-5 container mb-5">
+    <div className="contactus mt-5 rounded rounded-4 px-5 pt-5 container mb-5">
       <div className="row g-4 mt-5">
         {/* Contact Details */}
         <div className="col-lg-6 px-4 d-flex flex-column">
@@ -52,8 +52,8 @@ const Contact = () => {
         </div>
 
         {/* Contact Form */}
-        <div className="col-lg-6">
-          <form ref={form} onSubmit={sendEmail} className="p-4 shadow rounded-4">
+        <div className="col-lg-6  pb-5">
+          <form ref={form} onSubmit={sendEmail} className="p-4 bg-body shadow rounded-4">
             <h4 className="text-center mb-4">Contact Us</h4>
             <div className="mb-3">
               <label htmlFor="user_name" className="form-label">Name</label>
@@ -91,7 +91,7 @@ const Contact = () => {
             <div className="text-center">
               <button
                 type="submit"
-                className="btn btn-primary px-5 py-2 rounded-pill fs-5"
+                className="btn btn-primary mt-4 px-5 py-2 rounded-pill fs-5"
                 disabled={sending}
               >
                 {sending ? 'Sending...' : 'Send Message'}

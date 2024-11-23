@@ -222,15 +222,15 @@ body{
 }
 
 .contactus .form-control {
-  border: 2px solid #ddd;
+  border: 2px solid #f7f3f3;
   border-radius: 8px;
   padding: 0.75rem;
   transition: border-color 0.3s;
 }
 
 .contactus .form-control:focus {
-  border-color: #0a0a0a;
-  box-shadow: 0 0 5px rgba(10, 10, 10, 0.3);
+  border-color: #cccbcb;
+  box-shadow: 0 0 5px rgba(70, 70, 70, 0.3);
 }
 
 .contactus .btn-primary {
